@@ -1,0 +1,26 @@
+{
+  "name": "sequelized-burger",
+  "version": "1.0.0",
+  "description": "Files:\r https://github.com/cmontoya13/sequelized-burger",
+  "main": "server.js",
+  "dependencies": {
+    "path": "^0.12.7",
+    "sequelize": "^4.2.1",
+    "sequelize-cli": "^2.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmontoya13/sequelized-burger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmontoya13/sequelized-burger/issues"
+  },
+  "homepage": "https://github.com/cmontoya13/sequelized-burger#readme"
+}

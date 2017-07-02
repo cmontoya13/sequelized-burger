@@ -1,0 +1,37 @@
+
+<img src="/assets/img/burger.png" alt="">
+
+<h1>Eat-Da-Burger!</h1>
+
+<!-- Database results -->
+<table>
+	<tr>
+		<!-- Burger list -->
+		<td>
+			{{#each burgers}}
+				{{#unless this.devoured}}
+						<form action="/{{this.id}}?_method=PUT" method="POST">
+							<input type="text" value="{{this.id}}. {{this.burger_name}}">
+							<button type="submit" class="devourIt" name="devoured" value="true">Devour It!</button>
+						</form>
+				{{/unless}}
+			{{/each}}
+		</td>
+		<!-- Devoured results -->
+		<td>
+			{{#each burgers}}
+				{{#if this.devoured}}
+					<input type="text" class="devoured" name="id" value="{{this.id}}. {{this.burger_name}}"><br>
+				{{/if}}
+			{{/each}}
+		</td>
+	</tr>
+</table>
+
+<!-- Submit new burgers -->
+<form action="/" method="POST">
+    <textarea type="text" name="burger_name"></textarea>
+    <button type="submit" id="submit">SUBMIT</button>
+</form>
+
+<h2>Enter a burger you want to eat and click the 'Submit' button</h2>
